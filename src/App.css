@@ -1,15 +1,19 @@
-/*STYLINGLEA*/
-
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova');
+
+
+/*Color variables*/
 :root{
   --dark-color: hsl(0,0%,0%);
   --gray-color: hsl(0,0%,60%);
   --light-color: hsl(0,0%,100%);
   --border-color-dark: hsl(10,95%,70%);
-  --border-color-normal: hsl(10,95%,83%);
+  --border-color-normal: #F09786;
   --border-color-light: hsl(10,95%,93%);
 }
+
+/*Prevent default formatting*/
 *{
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -19,12 +23,11 @@
   padding: 0;
 }
 
-/* GLOBAL STYLES */
+/* general stye */
 a{
   text-decoration: none;
   transition: .25s;
 }
-
 
 /*
 button:hover{
@@ -32,30 +35,26 @@ button:hover{
 }
 */
 
-header{
-  min-height: 100vh;
-}
-.home-img {
-  height: 100%;
-  object-fit:cover;
-  object-position: 50% 80%;
-  width: 100%;
-}
+
 p{
   color: var(--gray-color);
-  font-size: .875em;
+  font-size: 1em;
   hyphens: auto;
   line-height: 1.5;
   margin: 1em 0;
 }
 
 h3{
-  letter-spacing: -.05em;
+  font-weight: 500;
+  letter-spacing: .07em;
   line-height: 1;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+
+  text-transform: uppercase;
 }
+
 
 /* CONTAINERS STYLES */
 .container{
@@ -65,7 +64,21 @@ h3{
   display: flex;
 }
 
-/* HEADER NAV */
+
+/*
+██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗     ███╗   ███╗ ██████╗ ██████╗ 
+██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗    ████╗ ████║██╔═══██╗██╔══██╗
+███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝    ██╔████╔██║██║   ██║██████╔╝
+██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗    ██║╚██╔╝██║██║   ██║██╔══██╗
+██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║    ██║ ╚═╝ ██║╚██████╔╝██████╔╝
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝ ╚═════╝                                                                              
+*/
+
+header{
+  min-height: 100vh;
+}
+
+/* app title */
 .logo-link{
   color: var(--dark-color);
   font-weight: 600;
@@ -77,13 +90,13 @@ h3{
   flex-direction: column;
 }
 
-
 /*
 .header-menu-link:hover{
   color: var(--dark-color);
   text-decoration: underline;
 }
 */
+
 .ghost-button{
   background: transparent;
   border: none;
@@ -98,14 +111,9 @@ h3{
   min-width: 9em;
   padding: 0 1em;
 }
-/*
-.ghost-button:hover{
-  background: var(--gray-color);
-  color: var(--light-color);
-}
-*/
 
-/* HEADER CONTENT */
+
+/* Zombie circle */
 .header-img{
   border-radius: 50%;
   box-shadow: 0 0 0 .5em var(--border-color-dark),
@@ -117,9 +125,27 @@ h3{
   width: 15em;
   
 }
+
+.home-img {
+  height: 100%;
+  object-fit:cover;
+  object-position: 50% 80%;
+  width: 100%;
+
+}
+
+/*
+██╗  ██╗ ██████╗ ███╗   ███╗███████╗    ████████╗███████╗██╗  ██╗████████╗    ███╗   ███╗ ██████╗ ██████╗ 
+██║  ██║██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝    ████╗ ████║██╔═══██╗██╔══██╗
+███████║██║   ██║██╔████╔██║█████╗         ██║   █████╗   ╚███╔╝    ██║       ██╔████╔██║██║   ██║██████╔╝
+██╔══██║██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██╔══╝   ██╔██╗    ██║       ██║╚██╔╝██║██║   ██║██╔══██╗
+██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ███████╗██╔╝ ██╗   ██║       ██║ ╚═╝ ██║╚██████╔╝██████╔╝
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═╝     ╚═╝ ╚═════╝ ╚═════╝                                                                                                          
+*/
+
 .header-description{
   margin: auto;
-  max-width: 30em
+  max-width: 40em
 }
 .header-title{
   font-size: 2.5em;
@@ -129,53 +155,69 @@ h3{
 }
 
 
-@media only screen and (min-width: 1024px){ 
-  /* GLOBAL STYLES */
+/*
+██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗     ███████╗ ██████╗██████╗ ███████╗███████╗███╗   ██╗
+██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝████╗  ██║
+███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝    ███████╗██║     ██████╔╝█████╗  █████╗  ██╔██╗ ██║
+██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗    ╚════██║██║     ██╔══██╗██╔══╝  ██╔══╝  ██║╚██╗██║
+██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║    ███████║╚██████╗██║  ██║███████╗███████╗██║ ╚████║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
+*/
+
+@media only screen and (min-width: 1100px){ 
   header{
     overflow: hidden;
   } 
-
   
-  /* CONTAINERS STYLES */
   .container{
     padding: 2em;
   }
   
-  /* HEADER NAV */
   .header-nav{
     flex-direction: row;
     justify-content: space-between;
   }
-  .header-menu-link{
-    padding: 0 1.5em;
-  }
+
   .ghost-button{
-    font-size: .75em;
+    font-size: 1em;
   } 
   
-  /* HEADER CONTENT */
-  .header-content{
-    position: relative;
+  .header-title{
+    font-size: calc(1vw + 2.5em);
   }
+
+
   .header-img{
     box-shadow: 0 0 0 2em var(--border-color-dark),
               0 0 0 4em var(--border-color-normal),
               0 0 0 6em var(--border-color-light);
     height: 40vw;
-    margin: 0;
+    margin: 2.5em;
     position: absolute;
     right: -16vw;
     top: 12vw;
     width: 40vw;
     
   } 
+
+  /*
+██╗  ██╗ ██████╗ ███╗   ███╗███████╗    ████████╗███████╗██╗  ██╗████████╗    ███████╗ ██████╗██████╗ ███████╗███████╗███╗   ██╗
+██║  ██║██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝    ██╔════╝██╔════╝██╔══██╗██╔════╝██╔════╝████╗  ██║
+███████║██║   ██║██╔████╔██║█████╗         ██║   █████╗   ╚███╔╝    ██║       ███████╗██║     ██████╔╝█████╗  █████╗  ██╔██╗ ██║
+██╔══██║██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██╔══╝   ██╔██╗    ██║       ╚════██║██║     ██╔══██╗██╔══╝  ██╔══╝  ██║╚██╗██║
+██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ███████╗██╔╝ ██╗   ██║       ███████║╚██████╗██║  ██║███████╗███████╗██║ ╚████║
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝       ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
+                                                                                                                                
+  */
+
+  .header-content{
+    position: relative;
+  }
   .header-description{
     margin: 3em 3em 0;
     max-width: 50vw;
   }
-  .header-title{
-    font-size: calc(1vw + 2.5em);
-  }
+
 }
 
 @media only screen and (orientation: portrait) and (min-height: 1024px){
@@ -189,12 +231,12 @@ h3{
   text-align: center;
 }
 
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-
+*/
 
 
 /* IMG */
@@ -205,7 +247,8 @@ img{
   width: 100%;
 }
 
-/* UL */
+/*
+UL 
 ul{
   list-style: none;
   margin-bottom: 1rem;
@@ -214,25 +257,33 @@ li{
   font-size: .875rem;
   padding: 0.25rem 0;
 }
+*/
 
-/* CONTAINERS */
+
+/* CARDS CONTAINERS */
 .main{
   margin: auto;
-  max-width: 640px;
+  max-width: 500px;
 }
 .page-search{
   display: flex;
   flex-wrap: wrap;
 }
-.sidebar-search{
-  flex: 0 1 200px;
-  padding: 1rem;
-}
+
 .card-search{
   flex: 1 1 280px;
 }
 
-/* CARDS */
+
+/*
+ ██████╗ █████╗ ██████╗ ██████╗ ███████╗    ███╗   ███╗ ██████╗ ██████╗ 
+██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝    ████╗ ████║██╔═══██╗██╔══██╗
+██║     ███████║██████╔╝██║  ██║███████╗    ██╔████╔██║██║   ██║██████╔╝
+██║     ██╔══██║██╔══██╗██║  ██║╚════██║    ██║╚██╔╝██║██║   ██║██╔══██╗
+╚██████╗██║  ██║██║  ██║██████╔╝███████║    ██║ ╚═╝ ██║╚██████╔╝██████╔╝
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ 
+*/
+
 .card{
   background: #fff;
   border-radius: .5rem;
@@ -242,17 +293,17 @@ li{
   flex: 0;
 }
 .card-figure{
-  height: 140px;
+  height: 180px;
 }
 .card-content{
-  padding: 1.5rem;
+  padding: 1rem 0;
   text-align: center;
 }
 
-/* BUTTONS */
+/*
 .btn{
-  background: #e99;
-  border: .125rem solid #e99;
+  background: var(--border-color-normal);
+  border: .125rem solid var(--border-color-normal);
   border-radius: 2.5rem;
   color: #fff;
   cursor: pointer;
@@ -260,11 +311,14 @@ li{
   letter-spacing: -.025em;
   line-height: 1;
   min-height: 2.5rem;
-  min-width: 12.5rem;
+  min-width: 6.5rem;
   padding: 0.5rem 1rem;
+  margin: 1rem;
   text-transform: uppercase;
   transition: .3s;
+  
 }
+
 .btn:focus{
   outline: none;
 }
@@ -273,17 +327,20 @@ li{
 }
 .btn:hover{
   background: #fff;
-  color: #e99;
+  color: var(--border-color-normal);
 }
+*/
+
 
 @supports (display: grid){
-  @media only screen and (min-width: 640px){
+  @media only screen and (min-width: 680px){
     .main{
-      max-width: 600px;
+      margin: 0 5rem;
+      max-width: 40em;
     }
     .card-search{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(212px, 2fr));
     }
   }
 }
