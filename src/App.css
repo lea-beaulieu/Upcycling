@@ -7,7 +7,7 @@
   --dark-color: hsl(0, 0%, 0%);
   --gray-color: hsl(0, 0%, 60%);
   --light-color: hsl(0, 0%, 100%);
-  --border-color-dark: hsl(10, 95%, 70%);
+  --border-color-dark: #fb826a;
   --border-color-normal: #fbd3b2;
   --border-color-light: #f5ebdc;
 }
@@ -22,21 +22,15 @@
   padding: 0;
 }
 
-/* general stye */
+/* text, title and links by default*/
 a {
   text-decoration: none;
   transition: 0.25s;
 }
 a:visited {
   text-decoration: none;
-  color: var(--gray-color);
+  color: var(--dark-color);
 }
-
-/*
-button:hover{
-  color: var(--gray-color);
-}
-*/
 
 p {
   color: var(--gray-color);
@@ -56,7 +50,7 @@ h3 {
   text-transform: uppercase;
 }
 
-/* CONTAINERS STYLES */
+/* main container */
 .container {
   padding: 1em;
 }
@@ -84,17 +78,11 @@ header {
   letter-spacing: 0.125em;
   text-transform: uppercase;
 }
+
 .header-nav {
   align-items: center;
   flex-direction: column;
 }
-
-/*
-.header-menu-link:hover{
-  color: var(--dark-color);
-  text-decoration: underline;
-}
-*/
 
 .counter-button {
   background: transparent;
@@ -139,11 +127,11 @@ header {
 ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═╝     ╚═╝ ╚═════╝ ╚═════╝                                                                                                          
 */
 
-.header-description {
+.page-description {
   margin: auto;
   max-width: 40em;
 }
-.header-title {
+.page-title {
   font-size: 2.5em;
   letter-spacing: -0.025em;
   line-height: 1.25;
@@ -177,8 +165,9 @@ header {
     font-size: 1em;
   }
 
-  .header-title {
+  .page-title {
     font-size: calc(1vw + 2.5em);
+    color: var(--dark-color);
   }
 
   .header-img {
@@ -202,17 +191,17 @@ header {
                                                                                                                                 
   */
 
-  .header-content {
+  .page-content {
     position: relative;
   }
-  .header-description {
+  .page-description {
     margin: 3em 3em 0;
     max-width: 50vw;
   }
 }
 
 @media only screen and (orientation: portrait) and (min-height: 1024px) {
-  .header-content {
+  .page-content {
     margin-top: 15vh;
   }
 }
@@ -220,13 +209,6 @@ header {
 .App {
   text-align: center;
 }
-
-/*
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-*/
 
 /* IMG */
 img {
@@ -236,29 +218,17 @@ img {
   width: 100%;
 }
 
-/*
-UL 
-ul{
-  list-style: none;
-  margin-bottom: 1rem;
-}
-li{
-  font-size: .875rem;
-  padding: 0.25rem 0;
-}
-*/
-
 /* CARDS CONTAINERS */
 .main {
   margin: auto;
   max-width: 500px;
 }
-.page-search {
+.page-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.card-search {
+.card-container {
   flex: 1 1 280px;
 }
 
@@ -298,7 +268,7 @@ li{
       margin: 0 5rem;
       max-width: 40em;
     }
-    .card-search {
+    .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(212px, 2fr));
     }

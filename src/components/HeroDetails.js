@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import AddButton from "./AddButton";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 class HeroDetails extends React.Component {
   state = {
@@ -40,7 +41,14 @@ class HeroDetails extends React.Component {
       if (heroesCopy.length < 3) {
         this.props.setHeroes([...heroesCopy, id]);
       } else {
-        alert("Sorry, you can only chose 3 heroes !");
+        // custom the basic alert
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Sorry, you can select 3 heroes only !",
+          confirmButtonColor:"#fb826a",
+        });
+        //alert("Sorry, you can only chose 3 heroes !");
       }
       //
     }
@@ -49,15 +57,18 @@ class HeroDetails extends React.Component {
   render() {
     return (
       <div>
-        <div class="header-description container">
-          <h2 class="header-title">
+        <div class="page-description container">
+          <h2 class="page-title">
             Find more about {this.state.singleHero.first_name}
           </h2>
-          <p>Is our heroe suitable for your team ?</p>
+          <p>
+            Is {this.state.singleHero.first_name} the right match for your team
+            ?
+          </p>
         </div>
         <main class="main">
-          <section class="page-search">
-            <div className="card-search">
+          <section class="page-container">
+            <div className="card-container">
               <div className="card">
                 <div className="card-figure-details">
                   <img src={this.state.singleHero.avatar} alt=""></img>

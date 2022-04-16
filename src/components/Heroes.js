@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import AddButton from "./AddButton";
-
+import Swal from "sweetalert2";
 import "./AddButton.scss";
 
 class Heroes extends React.Component {
@@ -41,8 +41,15 @@ class Heroes extends React.Component {
         this.props.setHeroes([...heroesCopy, id]);
         console.log("heroes added before clicking", heroesCopy);
       } else {
-        alert("votre team est complète");
+        // custom the basic alert
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Sorry, you can select 3 heroes only !",
+          confirmButtonColor: "#fb826a",
+        });
       }
+      //alert("Sorry, you can only chose 3 heroes !");
       // to do : populate HeroesCopy based on ID ?
       // .populate("id")
     }
@@ -51,17 +58,18 @@ class Heroes extends React.Component {
   render() {
     return (
       <>
-        <div class="header-description container">
-          <h2 class="header-title">Meet our heroes. Build your team.</h2>
+        <div class="page-description container">
+          <h2 class="page-title">Meet our heroes. Build your team.</h2>
           <p>
-            Help us keeping our closets clean and sustainable.{" "}
-            <strong>Select 3 heroes</strong> and start fighting against
-            fash-fashion zombies with your dream team. Don't wait any longer.
+            Help us keeping our closets <strong>clean</strong> and{" "}
+            <strong>sustainable</strong>. Select <strong>3 heroes</strong> and
+            start fighting against fash-fashion zombies with your dream team.
+            Don't wait any longer.
           </p>
         </div>
         <main class="main">
-          <section class="page-search">
-            <div className="card-search">
+          <section class="page-container">
+            <div className="card-container">
               {this.state.heroesList.map((hero) => {
                 return (
                   <div className="card" key={`hero-${hero.id}`}>
