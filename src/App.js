@@ -28,6 +28,7 @@ function App() {
               heroes={heroes}
               setHeroes={setHeroes}
               id={props.match.params.id}
+              first_name={props.match.params.first_name}
             />
           )}
         />

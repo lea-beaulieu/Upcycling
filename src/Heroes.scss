@@ -1,0 +1,13 @@
+.card{
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .125rem #0002;
+    margin: 1rem;
+    overflow: hidden;
+    flex: 0;
+
+    &.clicked {
+        background:rgb(192, 209, 192);
+      border: rgb(192, 209, 192);
+      }
+  }

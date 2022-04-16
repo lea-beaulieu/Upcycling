@@ -16,11 +16,15 @@ class AddButton extends React.Component {
   };
   render() {
     const styles = ["btn"];
+    let text0 = "";
     let text = "Hello Heroe";
+    let space ="";
 
     if (this.state.clicked) {
       styles.push("clicked");
-      text = "Bye Heroe";
+      text0="🖤       ";
+      space=<br></br>;
+      text = "See you soon Heroe";
     }
 
 
@@ -28,47 +32,29 @@ class AddButton extends React.Component {
       <div>
       {/*/ Styles join = btn + clicked*/}
         <button className={styles.join(' ')} onClick={this.toggleBtnHandler}>
-          {text}
+        {text0}{space}{text}
         </button>
       </div>
     );
   }
 }
 
+/*
+var LikeButton = React.createClass({
+  getInitialState: function() {
+    return {liked: false};
+  },
+  handleClick: function(event) {
+    this.setState({liked: !this.state.liked});
+  },
+  render: function() {
+    var text = this.state.liked ? 'liked' : 'like',
+				stateClass = this.state.liked ? 'is-active' : '';
+    return (
+      <button onClick={this.handleClick} className={'button button-like ' + stateClass}>{text}</button>
+    );
+  }
+});
+*/
 
 export default AddButton;
-
-{/*
-
-class App extends React.Component {
-  state = {
-    clicked:false
-  }  
-
-  toggleBtnHandler = () => {
-    return this.setState({
-      clicked:!this.state.clicked
-    })
-    
-  }
-  render() {
-    const styles = ['button'];
-    let text = 'Click me!';
-    let bodyEl = document.body;
-    
-    if (this.state.clicked) {
-      styles.push('clicked');
-      text = 'Clicked!';
-    } 
-    return (
-    <div className={app}>
-      <button className={styles.join(' ')} onClick={this.toggleBtnHandler}>{text}</button>
-    </div>
-    )
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
-
-
-*/}

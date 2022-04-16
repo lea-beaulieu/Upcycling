@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import AddButton from "./AddButton";
 
+import "./AddButton.scss";
+
+
 class Heroes extends React.Component {
   state = {
     heroesList: [],
@@ -31,24 +34,34 @@ class Heroes extends React.Component {
     // console.log('index  ' + index);
     if (index > -1) {
       heroesCopy.splice(index, 1);
-      // console.log('heroesCopy');
       // console.log(heroesCopy);
-      // Vérifier les ... 
+      // copy heroes
       this.props.setHeroes([...heroesCopy]);
     } else {
-      if(heroesCopy.length < 3){
+      if (heroesCopy.length < 3) {
         this.props.setHeroes([...heroesCopy, id]);
-      }else {
-         alert('votre team est complète');
-       }
-      //
-    }
+        console.log("heroes added before clicking",heroesCopy);
+      } else {
+        alert("votre team est complète");
+      }
+      // to do : populate HeroesCopy based on ID ?
+      // .populate("id")
 
+      
+    }
   };
 
   render() {
     return (
       <>
+        <div class="header-description container">
+          <h2 class="header-title">Meet our heroes. Build your team.</h2>
+          <p>
+            Help us keeping our closets clean and sustainable.{" "}
+            <strong>Select 3 heroes</strong> and start fighting against
+            fash-fashion zombies with your dream team. Don't wait any longer.
+          </p>
+        </div>
         <main class="main">
           <section class="page-search">
             <div className="card-search">
