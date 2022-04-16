@@ -28,7 +28,7 @@ class Header extends React.Component {
 
         <section>
           <figure class="header-img">
-                <img className='home-img' src="https://cdn.downtoearth.org.in/library/large/2021-02-16/0.01814800_1613464158_mannequins.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="Zombie"></img>
+                <img className='home-img' src="src/components/assets/ZOMBIE.png" alt="Zombie"></img>
           </figure>
           
         </section>

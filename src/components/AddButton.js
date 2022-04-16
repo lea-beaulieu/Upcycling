@@ -17,7 +17,7 @@ class AddButton extends React.Component {
   render() {
     const styles = ["btn"];
     let text0 = "";
-    let text = "Hello Heroe";
+    let text = "Hello Heroe !";
     let space ="";
 
     if (this.state.clicked) {
