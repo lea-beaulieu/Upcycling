@@ -7,7 +7,6 @@ import Heroes from "./components/Heroes";
 import HeroDetails from "./components/HeroDetails";
 import Header from "./components/header/Header";
 
-
 function App() {
   const [heroes, setHeroes] = useState([]);
 

@@ -5,7 +5,6 @@ import AddButton from "./AddButton";
 
 import "./AddButton.scss";
 
-
 class Heroes extends React.Component {
   state = {
     heroesList: [],
@@ -40,14 +39,12 @@ class Heroes extends React.Component {
     } else {
       if (heroesCopy.length < 3) {
         this.props.setHeroes([...heroesCopy, id]);
-        console.log("heroes added before clicking",heroesCopy);
+        console.log("heroes added before clicking", heroesCopy);
       } else {
         alert("votre team est complète");
       }
       // to do : populate HeroesCopy based on ID ?
       // .populate("id")
-
-      
     }
   };
 

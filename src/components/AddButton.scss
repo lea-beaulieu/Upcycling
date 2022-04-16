@@ -1,33 +1,31 @@
-
-  .btn {
-    background: var(--border-color-normal);
-    border: .125rem solid var(--border-color-normal);
-    border-radius: 2.5rem;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 700;
-    letter-spacing: -.025em;
-    line-height: 1;
-    min-height: 2.5rem;
-    min-width: 6.5rem;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-    text-transform: uppercase;
-    transition: .3s;
-    &:focus {
-      outline:none;
-    }
-    &.clicked {
-      background:rgb(192, 209, 192);
+.btn {
+  background: var(--border-color-dark);
+  border: 0.125rem solid var(--border-color-dark);
+  border-radius: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  min-height: 2.5rem;
+  min-width: 6.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+  &:focus {
+    outline: none;
+  }
+  &.clicked {
+    background: rgb(192, 209, 192);
     border: rgb(192, 209, 192);
-    }
   }
+}
 
-
-  .btn::-moz-focus-inner{
-    border: 0;
-  }
-  .btn:hover{
-    background: #fff;
-    color: var(--border-color-normal)
-  }
+.btn::-moz-focus-inner {
+  border: 0;
+}
+.btn:hover {
+  background: #fff;
+  color: var(--border-color-dark);
+}
