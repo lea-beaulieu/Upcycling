@@ -57,8 +57,8 @@ class HeroDetails extends React.Component {
   render() {
     return (
       <div>
-        <div class="page-description container">
-          <h2 class="page-title">
+        <div className="page-description container">
+          <h2 className="page-title">
             Find more about {this.state.singleHero.first_name}
           </h2>
           <p>
@@ -66,8 +66,8 @@ class HeroDetails extends React.Component {
             ?
           </p>
         </div>
-        <main class="main">
-          <section class="page-container">
+        <main className="main">
+          <section className="page-container">
             <div className="card-container">
               <div className="card">
                 <div className="card-figure-details">

@@ -58,8 +58,8 @@ class Heroes extends React.Component {
   render() {
     return (
       <>
-        <div class="page-description container">
-          <h2 class="page-title">Meet our heroes. Build your team.</h2>
+        <div className="page-description container">
+          <h2 className="page-title">Meet our heroes. Build your team.</h2>
           <p>
             Help us keeping our closets <strong>clean</strong> and{" "}
             <strong>sustainable</strong>. Select <strong>3 heroes</strong> and
@@ -67,8 +67,8 @@ class Heroes extends React.Component {
             Don't wait any longer.
           </p>
         </div>
-        <main class="main">
-          <section class="page-container">
+        <main className="main">
+          <section className="page-container">
             <div className="card-container">
               {this.state.heroesList.map((hero) => {
                 return (
@@ -79,7 +79,7 @@ class Heroes extends React.Component {
                       </Link>
                     </div>
 
-                    <div class="card-content">
+                    <div className="card-content">
                       <h3>{hero.first_name}</h3>
                     </div>
                     <AddButton id={hero.id} onToogle={this.handleToogle} />

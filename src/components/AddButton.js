@@ -39,22 +39,4 @@ class AddButton extends React.Component {
   }
 }
 
-/*
-var LikeButton = React.createClass({
-  getInitialState: function() {
-    return {liked: false};
-  },
-  handleClick: function(event) {
-    this.setState({liked: !this.state.liked});
-  },
-  render: function() {
-    var text = this.state.liked ? 'liked' : 'like',
-				stateClass = this.state.liked ? 'is-active' : '';
-    return (
-      <button onClick={this.handleClick} className={'button button-like ' + stateClass}>{text}</button>
-    );
-  }
-});
-*/
-
 export default AddButton;
